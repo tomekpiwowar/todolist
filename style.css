@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+}
+
+/* MAIN STYLES */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f7e7e8;
+  padding: 80px 0 0 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: linear-gradient(to right, #d786a7, #ef9e83);
+  box-shadow: 0px 2px 4px #e5dbff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: rgba(255,255,255,0.2);
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+header input::placeholder {
+  color: rgba(255,255,255,0.75);
+  opacity: 0.75;
+  
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #fff;
+  border: 0px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+header button i {
+ font-size: 1.2rem;
+ color: #958e90;
+ transition: color 0.2s ease;
+}
+ 
+header button i:hover{
+ color: #5b5456;
+}
+
+
+
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+.todo {
+  width: 100%;
+  float: left;
+}
+
+.todo li {
+  width: 100%;
+  min-height:  height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+  line-height: 22px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44,62,80,0.10);
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+}
+
+.todo li:last-of-type {
+  margin: 0;
+}
+
+.todo li .buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  
+}
+
+.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #edf0f1;
+}
+
+.todo#completed li .buttons .complete i {
+  background: #7ba7a7; 
+  color: #fff;
+}
+
+.todo#completed:not(:empty) {
+  position: relative;
+  padding: 60px 0 0 0;
+  
+}
+  
+.todo#completed:not(:empty):before {
+  
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d5cfd1;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -75px;
+  
+}
+
+.todo li .buttons .complete i {
+  border: 2px solid #7ba7a7;
+  border-radius: 50px;
+  padding: 5px;
+  font-size: 10px;
+  color: #7ba7a7;
+  transition: background 0.2s ease;
+}
+
+.todo li .buttons .complete i:hover {
+  background: #7ba7a7; 
+  color: #fff;
+  opacity: 0.6;
+}
+
+.todo li .buttons .remove i {
+  font-size: 22px;
+  color: #958e90;
+  transition: color 0.2s ease;
+ /* position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px; */
+  
+}
+
+.todo li .buttons .remove i:hover{
+  color: #e85656;
+}
+
+
