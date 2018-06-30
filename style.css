@@ -175,7 +175,6 @@ header button i:hover{
 }
   
 .todo#completed:before {
-  
   content: '';
   width: 150px;
   height: 1px;
