@@ -168,13 +168,13 @@ header button i:hover{
   color: #fff;
 }
 
-.todo#completed:not(:empty) {
+.todo#completed {
   position: relative;
   padding: 60px 0 0 0;
   
 }
   
-.todo#completed:not(:empty):before {
+.todo#completed:before {
   
   content: '';
   width: 150px;
@@ -217,4 +217,20 @@ header button i:hover{
   color: #e85656;
 }
 
+.todo#todo:empty:after {
+  content: 'Your uncompleted tasks.';
+  margin-top: 14px;
+}
 
+.todo#completed:empty:after {
+  content: 'Your completed tasks.';
+}
+
+.todo#todo:empty:after,
+.todo#completed:empty:after {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #d5cfd1;
+}
