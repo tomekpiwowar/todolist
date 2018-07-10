@@ -1,3 +1,3 @@
 # todolist
 
-https://tomekpiwowar.github.io/todolist/.
+Preview: https://tomekpiwowar.github.io/todolist/
